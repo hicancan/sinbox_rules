@@ -58,6 +58,8 @@ scripts/compile.sh rules dist
 5. 使用 `peaceiris/actions-gh-pages` 把 `dist/` 推送到仓库的 `dist` 分支（`force_orphan: true`），从而得到稳定的远程 URL。
 6. 额外保留 `actions/upload-artifact`，方便在 Actions 页面直接下载。
 
+> ⚠️ 由于需要推送 `dist` 分支，workflow 须在顶层设置 `permissions.contents: write`，否则会收到 `Permission denied to github-actions[bot]` 的 403。
+
 ### 远程下载 URL
 
 - **Raw 下载**：`https://raw.githubusercontent.com/<owner>/sinbox_rules/dist/<relative-path>.srs`
