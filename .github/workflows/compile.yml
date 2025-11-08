@@ -24,7 +24,7 @@ jobs:
 
       - name: Install sing-box CLI
         run: |
-          go install github.com/SagerNet/sing-box/cmd/sing-box@latest
+          go install github.com/sagernet/sing-box/cmd/sing-box@latest
           echo "${HOME}/go/bin" >> "$GITHUB_PATH"
 
       - name: Compile rule-sets
