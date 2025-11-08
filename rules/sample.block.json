@@ -6,14 +6,12 @@
         "doubleclick.net",
         "googlesyndication.com",
         "googletagmanager.com"
-      ],
-      "action": "reject"
+      ]
     },
     {
       "domain_keyword": [
         "analytics"
-      ],
-      "action": "reject"
+      ]
     }
   ]
 }

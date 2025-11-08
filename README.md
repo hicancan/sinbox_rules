@@ -22,7 +22,8 @@
 └── .gitignore
 ```
 
-规则 JSON 必须符合官方格式：https://sing-box.sagernet.org/configuration/rule-set/source-format/
+规则 JSON 必须符合官方格式：https://sing-box.sagernet.org/configuration/rule-set/source-format/  
+> ⚠️ Rule-set Source 内的条目属于 *Headless Rule*，不能包含 `action`、`outbound` 等行为字段；这些字段应在引用 `.srs` 的主配置 `route.rules` 中定义。
 
 ## 本地编译
 
