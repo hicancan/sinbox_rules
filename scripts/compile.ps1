@@ -32,7 +32,7 @@ foreach ($file in $ruleFiles) {
     $outputDir = Split-Path $outputPath -Parent
     New-Item -ItemType Directory -Force -Path $outputDir | Out-Null
     Write-Host "compiling $($file.FullName) -> $outputPath"
-    & $SingBoxExecutable rule-set compile $file.FullName $outputPath
+    & $SingBoxExecutable rule-set compile --output $outputPath $file.FullName
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }

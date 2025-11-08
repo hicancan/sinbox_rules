@@ -33,7 +33,7 @@ for file in "${rule_files[@]}"; do
   out="$OUTPUT_DIR/$rel_no_ext.srs"
   mkdir -p "$(dirname "$out")"
   echo "compiling $file -> $out"
-  "$SINGBOX_BIN" rule-set compile "$file" "$out"
+  "$SINGBOX_BIN" rule-set compile --output "$out" "$file"
 done
 
 echo "done. Generated $(find "$OUTPUT_DIR" -name '*.srs' | wc -l | tr -d ' ') file(s) in '$OUTPUT_DIR'."
